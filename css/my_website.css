@@ -1,0 +1,401 @@
+/*Start Variables*/
+:root {
+  --main-color: #353353;
+  --second-color: #5e5c7f;
+  --main-duration: 0.5s;
+  --section-background: #f6f6f6;
+  --main-padding: 30px;
+}
+/*End Variables*/
+
+/* Start Global Rule */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
+  background-color: #f9f9ff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.container {
+  /* We use padding-right and left for when size is small for example for a phone because for a small screen no margin will be do */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rule */
+
+/* Start Components */
+
+/* .special-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.special-header h2 {
+  margin: 0px;
+  font-size: 100px;
+  color: #ebeced;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.special-header p {
+  margin-top: -30px;
+  color: #797979;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .special-header h2 {
+    font-size: 60px;
+  }
+
+  .special-header p {
+    margin-top: -17px;
+    font-size: 15px;
+  }
+} */
+
+/* End Components */
+
+/* Start Header */
+header {
+  position: absolute; /* To make it out I calculated the screen */
+  width: 100%;
+  left: 0;
+  z-index: 2;
+  padding: 20px 0px;
+  border-bottom: solid 1px rgb(255 255 255 / 10%);
+}
+
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .logo {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+header .logo span {
+  color: #ff4c60;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+header .bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  padding: 7px;
+}
+
+header .bars span {
+  width: 20px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  header nav .bars {
+    display: none;
+  }
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  display: flex;
+  align-items: center;
+}
+
+header ul a {
+  transition: 0.3s;
+  padding-left: 60px;
+  font-weight: 700;
+}
+
+header ul a:hover {
+  color: #ffd15c;
+  transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+
+  header nav .bars:hover + ul {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100%);
+    height: 50vh;
+    background-color: #353353f5;
+    border-bottom: solid 1px rgb(255 255 255 / 10%);
+  }
+
+  header ul a {
+    padding-left: 0px;
+  }
+
+  header ul li {
+    display: block;
+  }
+}
+
+/* End Header */
+
+/* Start Landing Section */
+
+.landing {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(114.36deg, #5e5c7f 9.65%, #353353 69.29%);
+}
+
+.landing .container {
+  position: relative;
+  top: 75.5px;
+  height: calc(100% - 75.5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .landing .container .image {
+  position: relative;
+  left: -40px;
+  width: 450px;
+  height: 600px;
+  background: #9a99a9;
+  border-radius: 20px;
+  transform: skewY(15deg);
+}
+
+.landing .container .image::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  bottom: 0px;
+  width: 450px;
+  height: 600px;
+  background-image: url(/images/hamza_alzaatrh.JPG);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  transform: skewY(330deg);
+  box-shadow: 0px 5px 20px rgba(21, 20, 34, 0.5);
+} */
+
+.container-image {
+  position: relative;
+  margin-right: 50px;
+  width: 390px;
+  height: 600px;
+}
+
+@media (max-width: 1200px) {
+  .container-image {
+    margin-right: 0px;
+  }
+}
+
+.container-image .background-image {
+  position: absolute;
+  top: 50px;
+  width: 350px;
+  height: 500px;
+  background: #9a99a9;
+  border-radius: 20px;
+  transform: skewY(15deg);
+}
+
+.container-image .image {
+  position: relative;
+  left: 40px;
+  top: 50px;
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  transform: skewY(345deg);
+  box-shadow: 0px 5px 20px rgba(21, 20, 34, 0.5);
+  overflow: hidden;
+}
+
+.container-image .image img {
+  position: absolute;
+  left: 0px;
+  bottom: 4px;
+  width: 350px;
+  transform: skewY(15deg) scale(1.2);
+}
+
+.landing h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 100px;
+  margin-top: 0px;
+}
+
+.landing h1 span {
+  font-weight: 500;
+}
+
+.landing .links {
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing .links .button {
+  background-color: #ff4c60;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.landing .links .button:hover {
+  background-color: #d14555;
+}
+
+.landing .links .icons a {
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.landing .links .icons a:hover {
+  color: #ffd15c;
+}
+
+.landing .links .icons a:not(:first-child) {
+  margin-left: 10px;
+}
+
+.landing .arrow {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-15.2px);
+  font-size: 30px;
+}
+
+@media (max-width: 992px) {
+  .container-image {
+    width: calc(390px * 0.6);
+    height: calc(600px * 0.6);
+    margin-top: 20px;
+  }
+  .container-image .background-image {
+    width: calc(350px * 0.6);
+    height: calc(500px * 0.6);
+    top: calc(50px * 0.6);
+  }
+
+  .container-image .image {
+    width: calc(350px * 0.6);
+    height: calc(500px * 0.6);
+    left: calc(40px * 0.6);
+    top: calc(50px * 0.6);
+  }
+
+  .container-image .image img {
+    width: calc(350px * 0.6);
+  }
+
+  .landing .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .landing .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .landing h1 {
+    font-size: 50px;
+    margin: 20px 0px;
+  }
+
+  .landing .links {
+    flex-direction: column;
+  }
+
+  .landing .links .button {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+  }
+
+  .landing .links .icons a {
+    font-size: 20px;
+  }
+}
+/* Emd Landing Section */
