@@ -211,6 +211,10 @@ header ul a:hover {
 /* Start Landing Section */
 
 .landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100vh;
   background: linear-gradient(114.36deg, #5e5c7f 9.65%, #353353 69.29%);
@@ -337,11 +341,8 @@ header ul a:hover {
 }
 
 .landing .arrow {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-15.2px);
   font-size: 30px;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 992px) {
